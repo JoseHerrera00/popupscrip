@@ -1,0 +1,2 @@
+[2024-11-25 09:38:48] Inicio del proceso.
+[2024-11-25 09:39:05] Proceso finalizado.
