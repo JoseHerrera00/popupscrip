@@ -133,7 +133,7 @@ function Show-ImagesSequentially {
 
   # --- INICIO DE AUDIO ---
 
-$audioPath = "C:\Temp\Popupvideo.mp4"  # Cambia la ruta si quieres otro archivo
+$audioPath = "C:\Temp\Popupvideo.mp3"  # Cambia la ruta si quieres otro archivo
 if (Test-Path $audioPath) {
     $player = New-Object System.Windows.Media.MediaPlayer
     $player.Open([Uri]::new("file:///" + $audioPath.Replace('\', '/')))
@@ -224,3 +224,4 @@ function Run-Process {
 
 # Ejecutar el proceso
 Run-Process
+
