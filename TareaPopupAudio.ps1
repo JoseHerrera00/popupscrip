@@ -5,7 +5,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/JoseHerrera00/popupscr
 Start-BitsTransfer -Source "https://raw.githubusercontent.com/JoseHerrera00/popupscrip/main/Popupvideo.mp4" -Destination "C:\Temp\Popupvideo.mp4"
 
 # Definir la hora a la que quieres que se ejecute la tarea (ejemplo: 16:49)
-$horaEjecucion = Get-Date -Hour 11 -Minute 25 -Second 0
+$horaEjecucion = Get-Date -Hour 11 -Minute 32 -Second 0
 
 # Crear la acción para ejecutar el script con PowerShell
 $Action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument '-NoProfile -WindowStyle Normal -File "C:\Temp\popupaudio.ps1"'
@@ -18,4 +18,5 @@ $usuario = (Get-WmiObject -Class Win32_ComputerSystem).UserName
 
 # Registrar o reemplazar la tarea programada con privilegios elevados
 Register-ScheduledTask -TaskName "InteractiveTask" -Action $Action -Trigger $Trigger -RunLevel Highest -User $usuario -Force
+
 
