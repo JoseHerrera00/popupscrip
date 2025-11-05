@@ -2,7 +2,7 @@
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/JoseHerrera00/popupscrip/main/popupaudio.ps1" -OutFile "C:\Temp\popupaudio.ps1" -UseBasicParsing
 
 # Definir la hora a la que quieres que se ejecute la tarea (ejemplo: 16:49)
-$horaEjecucion = Get-Date -Hour 10 -Minute 24 -Second 1
+$horaEjecucion = Get-Date -Hour 15 -Minute 31 -Second 1
 
 # Crear la acción para ejecutar el script con PowerShell
 $Action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument '-NoProfile -WindowStyle Normal -File "C:\Temp\popupaudio.ps1"'
@@ -15,6 +15,7 @@ $usuario = (Get-WmiObject -Class Win32_ComputerSystem).UserName
 
 # Registrar o reemplazar la tarea programada con privilegios elevados
 Register-ScheduledTask -TaskName "InteractiveTask" -Action $Action -Trigger $Trigger -RunLevel Highest -User $usuario -Force
+
 
 
 
