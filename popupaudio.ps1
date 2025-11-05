@@ -126,9 +126,9 @@ function Show-ImagesSequentially {
     )
 
     $imageDisplayTimes = @(
-        60,   # Tiempo en segundos para la primera imagen
-        60,   # Tiempo en segundos para la segunda imagen
-        120   # Tiempo en segundos para la tercera imagen
+        1200,   # Tiempo en segundos para la primera imagen
+        1200,   # Tiempo en segundos para la segunda imagen
+        1200   # Tiempo en segundos para la tercera imagen
     )
 
   # --- INICIO DE AUDIO ---
@@ -224,4 +224,5 @@ function Run-Process {
 
 # Ejecutar el proceso
 Run-Process
+
 
